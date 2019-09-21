@@ -1,0 +1,42 @@
+<h4>Cadastro de Funcionários</h4>
+<hr>
+
+<div class="row">
+    <div class="col-md-6">
+        
+    <form #formCadastro="ngForm" (submit)="cadastrarFuncionario(formCadastro)">
+        <label for="">Nome: </label>
+        <input type="text" class="form-control" 
+                name="nome" ngModel
+                placeholder="Nome do Funcionário">
+        <br>
+
+        <label for="">CPF: </label>
+        <input type="text" class="form-control" 
+                name="cpf" ngModel
+                placeholder="CPF do Funcionário">
+        <br>
+
+        <label for="">Salário: </label>
+        <input type="text" class="form-control" 
+                name="salario" ngModel
+                placeholder="Salário do Funcionário">
+        <br>
+
+        <label for="">Data de Admissão: </label>
+        <input type="date" class="form-control"
+                name="dataAdmissao" ngModel>
+        <br>
+
+        <button type="submit" class="btn btn-success">
+            Cadastro Funcionário
+        </button>
+
+        <br>
+        <br>
+
+        <strong>{{mensagem}}</strong>
+
+    </form>
+    </div>
+</div>
